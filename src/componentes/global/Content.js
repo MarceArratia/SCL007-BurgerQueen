@@ -9,9 +9,11 @@ class Content extends Component {
         <h2>Mesero :</h2>
         <h2>Pedido Nº :</h2>
         <h2>Mesa Nº :</h2>
-    
-        <input type="button" value="Desayuno" />
-        <input type="button" value="Almuerzo"/>
+    <div>
+        <button>Desayuno</button>
+        <button>Almuerzo</button>
+        
+        </div>
         <table>
     <tr>
     <td><h5>Descripción     Cantidad</h5></td>
