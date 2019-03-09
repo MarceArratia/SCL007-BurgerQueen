@@ -1,6 +1,6 @@
 export default [
     {
-        title: 'Home',
+        title: 'Inicio',
         url: '/',
     },
     {
@@ -8,11 +8,11 @@ export default [
         url: '/blog',
     },
     {
-        title: 'About Us',
+        title: 'Acerca de nosotros',
         url: '/about'
     },
     {
-        title: 'Contact Us',
+        title: 'Contáctenos',
         url: '/contact'
     }
 ];

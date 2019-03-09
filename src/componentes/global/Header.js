@@ -12,7 +12,7 @@ class Header extends Component {
   };
   render() {
     const { title, items} = this.props;
-
+//key guarda la posición de cada elemento en el array
     return (
       <div className="Header">
       <h1>{title}</h1>
