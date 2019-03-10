@@ -35,9 +35,9 @@ handleCountClick(e){
     return (
       <div className="Content">
         
-        <h2>Mesero :</h2>
-        <h2>Pedido Nº :</h2>
-        <h2>Mesa Nº :</h2>
+        <h3>Mesero :</h3>
+        <h3>Pedido Nº :</h3>
+        <h3>Mesa Nº :</h3>
     <div>
         <button>Desayuno</button>
         <button>Almuerzo</button>

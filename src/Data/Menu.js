@@ -1,18 +1,14 @@
 export default [
     {
-        title: 'Inicio',
+        title: 'Registrarse',
         url: '/',
     },
     {
-        title: 'Blog',
+        title: 'Ingresar Camarero',
         url: '/blog',
     },
     {
-        title: 'Acerca de nosotros',
-        url: '/about'
+        title: 'Ingresar Maestro de Cocina',
+        url: '/blog',
     },
-    {
-        title: 'Contáctenos',
-        url: '/contact'
-    }
 ];
