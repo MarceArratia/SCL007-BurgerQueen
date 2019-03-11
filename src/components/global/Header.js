@@ -16,7 +16,7 @@ class Header extends Component {
     return (
       <div className="Header">
       <h1>{title}</h1>
-      <ul className="Menu">
+      <ul className="Login">
       {items && items.map((item,key)=> <li key={key}>{item.title}</li>)}
       </ul>
       </div>

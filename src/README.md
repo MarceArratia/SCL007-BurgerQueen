@@ -2,11 +2,8 @@
 
 ## Preámbulo
 
-Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
-restaurante que nos ha contactado porque quieren que alguien les construya una
-interfaz donde puedan tomar pedidos usando una tablet.
+Burger-queen es un carrito de compras de comida, en donde el mesero podrá hacer los pedidos de los clientes, podrá modificar dichos pedidos, de igual manera podrá lanzar la orden hacia la cocina. Finalmente, esta app puede emitir una boleta básica de los pedidos.
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
 Como punto de partida,
 nos comparten el siguiente correo recibido del cliente:

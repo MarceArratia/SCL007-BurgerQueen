@@ -1,0 +1,54 @@
+{
+    "Desayuno": [
+        {
+            "type": "Café americano",
+            "precio": "500"
+        },
+        {
+            "type": "Café con leche",
+            "precio": "700"
+        },
+        {
+            "type": "Sandwich de jamón y queso",
+            "precio": "1000"
+        },
+        {
+            "type": "Jugo natural",
+            "precio": "700"
+        }
+    ],
+    "Comida": [
+        {
+            "type": "Hamburguesa simple",
+            "precio": "1500"
+        },
+        {
+            "type": "Hamburguesa doble",
+            "precio": "2500"
+        },
+        {
+            "type": "Papas fritas",
+            "precio": "500"
+        },
+        {
+            "type": "Onion Rings",
+            "precio": "500"
+        },
+        {
+            "type": "Agua 500ml",
+            "precio": "500"
+        },
+        {
+            "type": "Agua 750ml",
+            "precio": "800"
+        },
+        {
+            "type": "Gaseosa 500ml",
+            "precio": "700"
+        },
+        {
+            "type": "Gaseosa 750ml",
+            "precio": "1000"
+        }
+    ]
+  }

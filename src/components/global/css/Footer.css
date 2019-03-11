@@ -1,6 +1,8 @@
 .Footer{
-    margin: 0 auto;
+    background-color: red;
+    height: 50px;
+    padding: 15px;
+    color:white;
     text-align: center;
-    width: 90%;
 }
 

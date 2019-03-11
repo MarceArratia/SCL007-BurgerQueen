@@ -4,7 +4,7 @@ export default [
         url: '/',
     },
     {
-        title: 'Ingresar Camarero',
+        title: 'Ingresar Mesero',
         url: '/blog',
     },
     {

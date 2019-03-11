@@ -1,39 +1,34 @@
+//dependencia
 import React, { Component } from 'react';
-import './css/Content.css';
-import CafeAmericano from '../Contador';
-import CafeLeche from '../Contador';
-import SandwichJamon from '../Contador';
-import JugoNatural from '../Contador';
+import '../global/css/Content.css';
 
+//componentes
+import CafeAmericano from '../Count';
+import CafeLeche from '../Count';
+import SandwichJamon from '../Count';
+import JugoNatural from '../Count';
 
 class Content extends Component {
+  sendOrder(){
+    /*alert(document.getElementById("ca").innerHTML);*/
+    let arrayJson=[
+      "Desayuno:","CafeAmericano:"+document.getElementById("coffeAmerican").innerHTML,
+      "CafeConLeche:"+document.getElementById("coffeMilk").innerHTML,
+      "Sandwich:"+document.getElementById("sandwichCheesse").innerHTML,
+      "JugoNatural:"+document.getElementById("naturalJuice").innerHTML
+    ];
+    console.log(arrayJson);
+  }
   render() {
-    console.log('Ejecuta Render');
     return (
       <div className="Content">
         
-        <h3>Mesero :</h3>
-        <h3>Pedido Nº :</h3>
-        <h3>Mesa Nº :</h3>
-    <div>
-        <button>Desayuno</button>
-        <button>Almuerzo</button>
         
-       
-<p>
- 
-</p>
-<p>
-<h4>Café Americano:  <CafeAmericano /> </h4>
-<h4>Café con Leche: <CafeLeche /></h4>
-<h4>Sandwich de Jamón Queso: <SandwichJamon /></h4>
-<h4>Jugo Natural: <JugoNatural /></h4>
-<h3>Total :</h3>
-
-</p>
-        </div>
-     
-     
+<div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
+<div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
+<div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
+<div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
+<div className="order"><button className="sendOrder" onClick={this.sendOrder}>Enviar pedido</button></div>
   </div>
     );
   }

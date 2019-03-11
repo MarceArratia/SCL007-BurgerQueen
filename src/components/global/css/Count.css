@@ -1,0 +1,15 @@
+.Button{
+    font-size: 70px;
+    color: white;
+}
+
+.divSecond{
+    width: 18%;
+    align-content: center;   
+    display: inline-block;   
+}
+
+.divTitle{
+    width: 44%;
+    display: inline-block;
+}
