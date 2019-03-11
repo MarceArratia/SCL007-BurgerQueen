@@ -8,6 +8,7 @@ import CafeLeche from '../Count';
 import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
 
+//Menú desayuno
 class Content extends Component {
   sendOrder(){
     /*alert(document.getElementById("ca").innerHTML);*/
