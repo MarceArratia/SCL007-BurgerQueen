@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import Header from './global/Header';
 import Content from './global/Content';
 import Footer from './global/Footer';
-import ContentLounch './global/ContentLounch';
+
 //Data
 import items from '../data/Login';
 class App extends Component {

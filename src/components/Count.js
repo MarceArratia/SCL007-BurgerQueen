@@ -5,7 +5,6 @@ import '../components/global/css/Count.css';
 class Count extends React.Component{
     constructor(props) {
         super(props)
-        console.log(props.id);
         this.state = {
           contador:0
         }
