@@ -7,12 +7,17 @@ import CafeAmericano from '../Count';
 import CafeLeche from '../Count';
 import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
-import TipoHamburguesa from '../BurgerTips';
+import TipoHamburguesa from '../BurgerTypes';
+import {DB_CONFIG} from '../../Initializers/firebase';
+import firebase from 'firebase';
+import TamanioHamburguesa from '../BurgerSize';
+import AgregadoHamburguesa from '../BurgerAggregates';
 
-//Menú desayuno
+
+
+//Menú desayuno y almuerzo
 class Content extends Component {
-  sendOrder(){
-    /*alert(document.getElementById("ca").innerHTML);*/
+  sendOrderBreakfast(){
     let arrayJson=[
       "Cliente:"+document.getElementById("textCliente").value,
       "Desayuno:","CafeAmericano:"+document.getElementById("coffeAmerican").innerHTML,
@@ -20,7 +25,9 @@ class Content extends Component {
       "Sandwich:"+document.getElementById("sandwichCheesse").innerHTML,
       "JugoNatural:"+document.getElementById("naturalJuice").innerHTML  
     ];
-    console.log(arrayJson);
+   firebase.initializeApp(DB_CONFIG);
+    let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
+    refmessageAnswer.push({arrayJson});
   }
   render() {
     return (
@@ -31,8 +38,11 @@ class Content extends Component {
 <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
 <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
 <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
-<div className="order"><button className="sendOrder" onClick={this.sendOrder}>Enviar pedido</button></div>
-<div><TipoHamburguesa/></div>
+<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrder}>Enviar pedido</button></div>
+<div className="divTypes"><TipoHamburguesa/></div>
+<div className="divTypes"><TamanioHamburguesa/></div>
+<div className="divTypes"><AgregadoHamburguesa/></div>
+<div className="order"><button className="sendOrder" onClick={this.sendOrder}>Agregar Pedido Almuerzo</button></div>
   </div>
     );
   }

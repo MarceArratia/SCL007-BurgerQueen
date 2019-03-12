@@ -3,7 +3,7 @@ import React from 'react';
 
 
 //componentes
-class BurgerTips extends React.Component{
+class BurgerTypes extends React.Component{
   constructor(props){
     super()
   }
@@ -21,5 +21,5 @@ class BurgerTips extends React.Component{
       //<input type='checkbox'></input> 
   }
 }
-  export default BurgerTips;
-  //checklist tipo hamburguesas agregando nombre hamburguerTip.js
+  export default BurgerTypes;
+  
