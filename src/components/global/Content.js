@@ -14,7 +14,8 @@ import TamanioHamburguesa from '../BurgerSize';
 import AgregadoHamburguesa from '../BurgerAggregates';
 import FrenchFries from '../Count';
 import OnionRings from '../Count';
-import BurgerDrinks from '../BurgerDrink'
+import BurgerDrinks from '../BurgerDrink';
+import AddOrderLounch from '../AddOrderLounch';
 
 //Menú desayuno y almuerzo
 class Content extends Component {
@@ -29,6 +30,17 @@ class Content extends Component {
    firebase.initializeApp(DB_CONFIG);
     let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
     refmessageAnswer.push({arrayJson});
+  }
+  sendOrderLounch(){
+    let arrayBurger=[];
+    let countBurger=arrayBurger.length;
+    if(document.getElementById("burgerTypes").value !== 0 && document.getElementById("burgerAgreg").value !== 0 && document.getElementById("burgerSize").value !== 0){
+      arrayBurger.push(countBurger,document.getElementById("burgerTypes").value,
+      document.getElementById("burgerAgreg").value,
+      document.getElementById("burgerSize").value)
+    }
+    AddOrderLounch.name=arrayBurger;
+ 
   }
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
@@ -51,7 +63,7 @@ class Content extends Component {
 <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
 <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
 <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
-<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrder}>Enviar pedido</button></div>
+<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrderBreakfast}>Enviar pedido</button></div>
 </div>
 <div id="menuLounch"  style={{display: 'none'}}>
 <div>
@@ -65,7 +77,8 @@ class Content extends Component {
 <div className="divTypes"><TipoHamburguesa/></div>
 <div className="divTypes"><TamanioHamburguesa/></div>
 <div className="divTypes"><AgregadoHamburguesa/></div>
-<div className="order"><button className="addOrder" onClick={this.sendOrder}>Agregar Pedido</button></div>
+<AddOrderLounch />
+<div className="order"><button className="addOrder" onClick={this.sendOrderLounch}>Agregar Pedido</button></div>
 <div className="divSidedich">Acompañamientos</div>
 <div ><FrenchFries id="frenchFries" name="Papas fritas :"/></div>
 <div ><OnionRings id="onionRings" name="Onion Rings :"/></div>
