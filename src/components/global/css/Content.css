@@ -16,8 +16,8 @@
 
 .order{
   align-content: center;
-  margin-left: 35%;
-  margin-top: 2%;
+  margin-left: 80%;
+  margin-top: 5%;
 }
 
 .divTypes{
@@ -27,8 +27,8 @@
 }
 .menuOrder{
   width: 18%;
-  font-size: 30px;
-  color: white;
+  font-size: 25px;
+  color: black;
   margin-top: 2%;
   margin-left: 18%;
 }
@@ -41,18 +41,6 @@
   font-size: 25px;
 }
 
-<<<<<<< HEAD
-.menuBreakfast{
-  align-content: center;
-  
-}
-
-.divTittleTypes{
-margin: 2%;
-}
-
-=======
 .divSidedich{
   margin-top: 2%;
 }
->>>>>>> 9524ca29a72715891aa4788403e7d3da0c9547e8
