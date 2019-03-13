@@ -11,13 +11,13 @@
 .sendOrder{
   font-size: 30px;
     color: black;
-    
+    margin-top: 10%;
 }
 
 .order{
   align-content: center;
   margin-left: 35%;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .divTypes{
@@ -25,4 +25,22 @@
   align-content: center;   
   display: inline-block;   
 }
+.menuOrder{
+  width: 18%;
+  font-size: 30px;
+  color: white;
+  margin-top: 2%;
+  margin-left: 18%;
+}
 
+.menuTitle{
+  margin-left: 40%;
+}
+
+.addOrder{
+  font-size: 25px;
+}
+
+.divSidedich{
+  margin-top: 2%;
+}
