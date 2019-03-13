@@ -12,8 +12,11 @@ class BurgerAggregates extends React.Component{
    
     return(
       <div>
-        <input type='checkbox' id="eggs" />Huevos<br/>
-        <input type='checkbox' id="cheese" />Queso<br/>
+         <select className="burgerAgreg" id="burgerAgreg">
+                <option value="0" selected>Seleccione tipo</option>
+                <option value="Huevos">Huevos</option>
+                <option value="Queso">Queso</option>
+                </select>
       </div>
        
     )

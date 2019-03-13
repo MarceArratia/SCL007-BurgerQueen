@@ -1,6 +1,6 @@
 //dependencia
 import React from 'react';
-
+import '../components/global/css/BurgerTypes.css';
 
 //componentes
 class BurgerTypes extends React.Component{
@@ -9,16 +9,17 @@ class BurgerTypes extends React.Component{
   }
 
   render() {
-   
     return(
       <div>
-        <input type='checkbox' id="pollo" />Pollo<br/>
-        <input type='checkbox' id="res" />Res<br/>
-        <input type='checkbox' id="vegetariana" />Vegetariana<br/>
+        <select className="burgerTypes" id="burgerTypes">
+                <option value="0" selected>Seleccione tipo</option>
+                <option value="Res">Res</option>
+                <option value="Vegetariana">Vegetariana</option>
+                <option value="Pollo">Pollo</option>
+                </select>
       </div>
        
     )
-      //<input type='checkbox'></input> 
   }
 }
   export default BurgerTypes;

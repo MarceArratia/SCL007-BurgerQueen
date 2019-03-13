@@ -12,8 +12,11 @@ class BurgerSize extends React.Component{
    
     return(
       <div>
-        <input type='checkbox' id="simple" />Simple<br/>
-        <input type='checkbox' id="doble" />Doble<br/>
+         <select className="burgerSize" id="burgerSize">
+                <option value="0" selected>Seleccione tipo</option>
+                <option value="Simple">Simple</option>
+                <option value="Doble">Doble</option>
+                </select>
       </div>
        
     )
