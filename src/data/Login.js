@@ -4,11 +4,7 @@ export default [
         url: '/',
     },
     {
-        title: 'Ingresar Mesero',
-        url: '/blog',
-    },
-    {
-        title: 'Ingresar Maestro de Cocina',
+        title: 'Ingresar',
         url: '/blog',
     },
 ];

@@ -24,6 +24,7 @@ class Content extends Component {
       "Sandwich:"+document.getElementById("sandwichCheesse").innerHTML,
       "JugoNatural:"+document.getElementById("naturalJuice").innerHTML  
     ];
+
    firebase.initializeApp(DB_CONFIG);
     let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
     refmessageAnswer.push({arrayJson});
@@ -49,7 +50,8 @@ class Content extends Component {
 <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
 <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
 <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
-<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrderBreakfast}>Enviar pedido</button></div>
+<div className="order"><button>Pedido</button></div>
+<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrderBreakfast}>Enviar</button></div>
 </div>
 <div id="menuLounch"  style={{display: 'none'}}>
 <div>
@@ -64,8 +66,10 @@ class Content extends Component {
 <div className="divSidedich">Acompañamientos</div>
 <div ><FrenchFries id="frenchFries" name="Papas fritas :"/></div>
 <div ><OnionRings id="onionRings" name="Onion Rings :"/></div>
+<div className="order"><button className="addOrder" >Agregar</button></div>
 <div className="divSidedich">Bebidas</div>
 <div><BurgerDrinks /></div>
+<div className="order"><button className="addOrder" >Agregar</button></div>
 </div>
 
   </div>

@@ -16,8 +16,8 @@
 
 .order{
   align-content: center;
-  margin-left: 35%;
-  margin-top: 2%;
+  margin-left: 80%;
+  margin-top: 5%;
 }
 
 .divTypes{
@@ -27,8 +27,8 @@
 }
 .menuOrder{
   width: 18%;
-  font-size: 30px;
-  color: white;
+  font-size: 25px;
+  color: black;
   margin-top: 2%;
   margin-left: 18%;
 }
