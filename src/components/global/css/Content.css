@@ -1,47 +1,100 @@
-.Content {
-  background-color: #282c34;
-  min-height: 75vh;
-  padding: 5%;
-  flex-direction: column;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+  .Content {
+    background-color: #282c34;
+    min-height: 75vh;
+    padding: 5%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .sendOrder{
+    font-size: 30px;
+      color: black;
+      margin-top: 10%;
+  }
+  
+  .order{
+    align-content: center;
+    margin-left: 80%;
+    margin-top: 5%;
+  }
+  
+  .divTypes{
+    width: 33%;
+    align-content: center;   
+    display: inline-block;   
+  }
+  .menuOrder{
+    width: 18%;
+    font-size: 25px;
+    color:white;
+    margin-top: 2%;
+    margin-left: 18%;
+  }
+  
+  .menuTitle{
+    margin-left: 42%;
+  }
+  
+  .addOrder{
+    font-size: 25px;
+    color:white;
+  }
+  
+  .divSidedich{
+    margin-top: 2%;
+  }
 }
 
-.sendOrder{
-  font-size: 30px;
-    color: black;
-    margin-top: 10%;
-}
-
-.order{
-  align-content: center;
-  margin-left: 80%;
-  margin-top: 5%;
-}
-
-.divTypes{
-  width: 33%;
-  align-content: center;   
-  display: inline-block;   
-}
-.menuOrder{
-  width: 18%;
-  font-size: 25px;
-  color:white;
-  margin-top: 2%;
-  margin-left: 18%;
-}
-
-.menuTitle{
-  margin-left: 40%;
-}
-
-.addOrder{
-  font-size: 25px;
-  color:white;
-}
-
-.divSidedich{
-  margin-top: 2%;
+@media screen and (min-width: 1025px){
+  .Content {
+    background-color: #282c34;
+    min-height: 75vh;
+    padding: 5%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .sendOrder{
+    font-size: 30px;
+      color: black;
+      margin-top: 10%;
+  }
+  
+  .order{
+    align-content: center;
+    margin-left: 80%;
+    margin-top: 5%;
+  }
+  
+  .divTypes{
+    width: 33%;
+    align-content: center;   
+    display: inline-block;   
+  }
+  .menuOrder{
+    width: 18%;
+    font-size: 25px;
+    color:white;
+    margin-top: 2%;
+    margin-left: 18%;
+  }
+  
+  .menuTitle{
+    margin-left: 42%;
+  }
+  
+  .addOrder{
+    font-size: 25px;
+    color:white;
+  }
+  
+  .divSidedich{
+    margin-top: 2%;
+  }
 }

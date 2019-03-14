@@ -1,7 +1,7 @@
 //dependencia
 import React, { Component } from 'react';
 import '../global/css/Content.css';
-
+import '../global/css/Button.css';
 //componentes
 import CafeAmericano from '../Count';
 import CafeLeche from '../Count';
@@ -61,10 +61,11 @@ class Content extends Component {
   render() {
     return (
       <div className="Content">
-        <div><input type="text" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
+        <div><input  type="text" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
         <div className="menuTitle"><h3>Menú</h3></div>
-        <div ><button className="menuOrder" onClick={this.breakfastButton}>Desayuno</button>
-        <button className="menuOrder" onClick={this.lounchButton}>Almuerzo</button>
+        <div >
+        <img className="buttonAll" src={require("../../imag/breakfast.jpg")} onClick={this.breakfastButton}/>
+        <img className="buttonAll" src={require("../../imag/lunch.png")} onClick={this.lounchButton}/>
         </div>
         
 <div id="menuBreakfast" style={{display: 'none'}}> 

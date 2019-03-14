@@ -1,0 +1,14 @@
+.buttonAll{
+    background-color: #f44336;
+    font-size: 20px;
+    height: 150px;
+    width: 150px;
+    margin-left: 21%;
+}
+
+.buttonAdd{
+    background-color: #f44336;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+}
