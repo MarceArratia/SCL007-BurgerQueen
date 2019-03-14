@@ -3,8 +3,7 @@ import React from 'react';
 
 class AddOrderLounch extends React.Component{
     constructor(props) {
-        super(props);
-    console.log(props.name)
+        super();
 }
 render(){
     return(
@@ -18,7 +17,7 @@ render(){
         </tr>
     </thead>
     <tbody>
-        
+        {console.log(this.props)}
    
     </tbody>
 </table>

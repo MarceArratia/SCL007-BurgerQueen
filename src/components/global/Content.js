@@ -7,16 +7,13 @@ import CafeAmericano from '../Count';
 import CafeLeche from '../Count';
 import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
-import TipoHamburguesa from '../BurgerTypes';
 import {DB_CONFIG} from '../../Initializers/firebase';
 import firebase from 'firebase';
-import TamanioHamburguesa from '../BurgerSize';
-import AgregadoHamburguesa from '../BurgerAggregates';
 import FrenchFries from '../Count';
 import OnionRings from '../Count';
 import BurgerDrinks from '../BurgerDrink';
-import AddOrderLounch from '../AddOrderLounch';
 
+import BurgerOrder from '../BurgerOrder';
 //Menú desayuno y almuerzo
 class Content extends Component {
   sendOrderBreakfast(){
@@ -30,17 +27,6 @@ class Content extends Component {
    firebase.initializeApp(DB_CONFIG);
     let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
     refmessageAnswer.push({arrayJson});
-  }
-  sendOrderLounch(){
-    let arrayBurger=[];
-    let countBurger=arrayBurger.length;
-    if(document.getElementById("burgerTypes").value !== 0 && document.getElementById("burgerAgreg").value !== 0 && document.getElementById("burgerSize").value !== 0){
-      arrayBurger.push(countBurger,document.getElementById("burgerTypes").value,
-      document.getElementById("burgerAgreg").value,
-      document.getElementById("burgerSize").value)
-    }
-    AddOrderLounch.name=arrayBurger;
- 
   }
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
@@ -70,15 +56,11 @@ class Content extends Component {
   <p></p>
 <div className="divTypes">Hamburguesas</div>
   <p></p>
-  <div className="divTypes">Tipo</div>
-  <div className="divTypes">Tamaño</div>
-  <div className="divTypes">Agregado</div>
+
 </div>
-<div className="divTypes"><TipoHamburguesa/></div>
-<div className="divTypes"><TamanioHamburguesa/></div>
-<div className="divTypes"><AgregadoHamburguesa/></div>
-<AddOrderLounch />
-<div className="order"><button className="addOrder" onClick={this.sendOrderLounch}>Agregar Pedido</button></div>
+
+<BurgerOrder />
+
 <div className="divSidedich">Acompañamientos</div>
 <div ><FrenchFries id="frenchFries" name="Papas fritas :"/></div>
 <div ><OnionRings id="onionRings" name="Onion Rings :"/></div>

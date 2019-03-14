@@ -17,13 +17,13 @@ class BurgerDrinks extends React.Component{
               </select>
               <div>Agua</div>
               <select id="waterTypes">
-                <option value="0" selected>Seleccione</option>
+                <option value="0" defaultValue>Seleccione</option>
                 <option value="1">Gas</option>
                 <option value="2">Sin gas</option>
                </select>
                <div>Gaseosa</div>
               <select id="sodaTypes">
-                <option value="0" selected>Seleccione</option>
+                <option value="0" defaultValue>Seleccione</option>
                 <option value="1">Coca-cola</option>
                 <option value="2">Fanta</option>
                 <option value="3">Orange Crush</option>
