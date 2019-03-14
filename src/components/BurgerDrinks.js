@@ -1,17 +1,17 @@
 //dependencia
 import React from 'react';
-import '../components/global/css/BurgerOrder.css';
+import '../components/global/css/BurgerDrinks.css';
 
-class BurgerOrder extends React.Component{
+class BurgerDrinks extends React.Component{
 constructor(props){
     super(props);
-    this.state = {perro:'form-control',input:'Submit',tipo:'',tamaño:'',agregado:'',acompañamiento:'',pedido:[]};
+    this.state = {perro:'form-control',input:'Submit',ml:'',agua:'',gaseosa:'',pedido:[]};
 }
 onSubmit(e){
     e.preventDefault();
     if(this.submitInput.value === 'Agregar'){
-    const obj = {tipo:this.state.tipo,tamaño:this.state.tamaño,agregado:this.state.agregado,acompañamiento:this.state.acompañamiento};
-    this.setState({pedido:[...this.state.pedido,obj],tipo:'',tamaño:'',agregado:'',acompañamiento:''});
+    const obj = {tipo:this.state.tipo,ml:this.state.ml,agua:this.state.agua,gaseosa:this.state.gaseosa};
+    this.setState({pedido:[...this.state.pedido,obj],tamaño:'',agregado:'',acompañamiento:''});
     }else 
         if(this.submitInput.value === 'Edit'){
            /* const pos = Number(this.rowRef.value);
@@ -46,39 +46,34 @@ render(){
 return(
     <div className="container">
         <form className="form-horizontal" role="form" onSubmit={this.onSubmit.bind(this)}>
-            <div className="burgerTypes">Tipo</div>
-            <div className="burgerTypes">Tamaño</div>
-            <div className="burgerTypes">Agregado</div>
-            <div className="burgerTypes">Acompañamiento</div>
-            <div className="burgerOptions">
-                <select  className="selectButton" id="burgerTypes" onChange={event => this.setState({ tipo: event.target.value})}>
+            <div className="drinksTypes">ml</div>
+            <div className="drinksTypes">Agua</div>
+            <div className="drinksTypes">Gaseosa</div>
+            <div className="drinksTypes">
+                <select  className="selectButton" id="burgerTypes" onChange={event => this.setState({ ml: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
-                    <option value="Res">Res</option>
-                    <option value="Vegetariana">Vegetariana</option>
-                    <option value="Pollo">Pollo</option>
+                    <option value="500 ml">500 ml</option>
+                    <option value="750 ml">750 ml</option>
                 </select>
             </div>
-            <div className="burgerOptions">
-                <select className="selectButton"id="burgerSize" onChange={event => this.setState({ tamaño: event.target.value})} >
+            <div className="drinksOptions">
+                <select className="selectButton"id="burgerSize" onChange={event => this.setState({ agua: event.target.value})} >
                     <option value="0" defaultValue>Seleccione tipo</option>
-                    <option value="Simple">Simple</option>
-                    <option value="Doble">Doble</option>
+                    <option value="Con gas">Con gas</option>
+                    <option value="Sin gas">Sin gas</option>
                 </select>
             </div>
-            <div className="burgerOptions">
-                <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ agregado: event.target.value})}>
+            <div className="drinksOptions">
+                <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ gaseosa: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
-                    <option value="Huevos">Huevos</option>
-                    <option value="Queso">Queso</option>
+                    <option value="Coca-cola">Coca-cola</option>
+                    <option value="Fanta">Fanta</option>
+                    <option value="Orange Crush">Orange Crush</option>
+                    <option value="Bilz">Bilz</option>
+                    <option value="Pap">Pap</option>
+                    <option value="Coca Zero">Coca Zero</option>
                 </select>
             </div>
-            <div className="burgerOptions">
-            <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ acompañamiento: event.target.value})}>
-                    <option value="0" defaultValue>Seleccione tipo</option>
-                    <option value="PapasFritas">Papas Fritas</option>
-                    <option value="OnionRings">Onion Rings</option>
-                </select>
-                </div>
             <div className="form-group"> 
                 <div className="col-sm-offset-2 col-sm-10">
                   <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="selectButton" value="Agregar"/>
@@ -88,7 +83,7 @@ return(
             <input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
         </form>
         <div className="container" >	
-            <table id="burguerOrder" className="table table-hover">
+            <table id="orderDrinks" className="table table-hover">
                 <tbody>    
                     {this.state.pedido.map((data,index) => {                 
                         return <Row editRow= {this.editRow.bind(this)} pedido = {this.state.pedido}  data = {data} key={index} row={index} deleteRow={this.deleteRow.bind(this)} />
@@ -109,18 +104,17 @@ constructor(props){
 render(){
     return (
         <tr>
-            <td>{this.props.data.tipo}</td>
+            <td>{this.props.data.ml}</td>
             
-            <td>{this.props.data.tamaño}</td>
+            <td>{this.props.data.agua}</td>
 
-            <td>{this.props.data.agregado}</td>
+            <td>{this.props.data.gaseosa}</td>
             
-            <td>{this.props.data.acompañamiento}</td>
-            <td onClick={() => {this.props.deleteRow(this.props.row)}}>X</td>
+            <td className="glyphicon glyphicon-trash" onClick={() => {this.props.deleteRow(this.props.row)}}>X</td>
 
         </tr>
         
     );
 }
 }
-export default BurgerOrder;
+export default BurgerDrinks;

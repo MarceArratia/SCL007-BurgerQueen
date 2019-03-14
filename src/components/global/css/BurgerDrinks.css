@@ -1,0 +1,23 @@
+
+.burgerOptions{
+    font-size: 20px;
+    display: inline-block; 
+    margin-left: 10%;
+    color:white;
+}
+
+.selectButton{
+    color:white;
+}
+
+.drinksOptions{
+    font-size: 20px;
+    display: inline-block; 
+    margin-left: 16.5%;
+    color:white;
+}
+.drinksTypes{
+    font-size: 25px;
+    display: inline-block; 
+    margin-left: 22%;
+}

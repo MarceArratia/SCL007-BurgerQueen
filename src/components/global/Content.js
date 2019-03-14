@@ -9,9 +9,7 @@ import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
 import {DB_CONFIG} from '../../Initializers/firebase';
 import firebase from 'firebase';
-import FrenchFries from '../Count';
-import OnionRings from '../Count';
-import BurgerDrinks from '../BurgerDrink';
+import BurgerDrinks from '../BurgerDrinks';
 
 import BurgerOrder from '../BurgerOrder';
 //Menú desayuno y almuerzo
@@ -34,6 +32,30 @@ class Content extends Component {
   }
   lounchButton(){
     document.getElementById('menuLounch').style.display="block";
+  }
+
+  ordenKitchen(){
+    let orderKitchen=[];
+    let tableBurger=document.getElementById("burguerOrder");
+    let orderBurger=tableBurger.getElementsByTagName('tr');
+    for(let i=0;i<orderBurger.length;i++){
+      if(orderBurger[i].innerText !=="<tbody></tbody>"){
+        console.log(orderBurger[i].innerText);
+        orderKitchen.push(orderBurger[i].innerText);
+      }
+    }
+    let tableDrinks=document.getElementById('orderDrinks');
+    let tdDrinks=tableDrinks.getElementsByTagName('tr');
+    for(let i=0; i<tdDrinks.length;i++){
+      if(tdDrinks[i].innerText !=="<tbody></tbody>"){
+        console.log(tdDrinks[i].innerText);
+        orderKitchen.push(tdDrinks[i].innerText);
+      }
+    }
+    firebase.initializeApp(DB_CONFIG);
+    let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
+    refmessageAnswer.push({orderKitchen});
+ 
   }
 
   render() {
@@ -63,13 +85,9 @@ class Content extends Component {
 
 <BurgerOrder />
 
-<div className="divSidedich">Acompañamientos</div>
-<div ><FrenchFries id="frenchFries" name="Papas fritas :"/></div>
-<div ><OnionRings id="onionRings" name="Onion Rings :"/></div>
-<div className="order"><button className="addOrder" >Agregar</button></div>
 <div className="divSidedich">Bebidas</div>
 <div><BurgerDrinks /></div>
-<div className="order"><button className="addOrder" >Agregar</button></div>
+<div className="order"><button className="addOrder" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
 </div>
 
   </div>
