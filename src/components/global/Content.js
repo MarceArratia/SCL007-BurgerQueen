@@ -9,7 +9,7 @@ import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
 import {DB_CONFIG} from '../../Initializers/firebase';
 import firebase from 'firebase';
-import BurgerDrinks from '../BurgerDrinks';
+import BurgerDrinks from '../BurgerDrinks';  
 
 import BurgerOrder from '../BurgerOrder';
 //Menú desayuno y almuerzo
@@ -73,8 +73,7 @@ class Content extends Component {
 <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
 <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
 <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
-<div className="order"><button>Pedido</button></div>
-<div className="order"><button className="sendOrderBreakfast" onClick={this.sendOrderBreakfast}>Enviar</button></div>
+<div className="order"><button className="buttonAddSend" onClick={this.sendOrderBreakfast}>Enviar</button></div>
 </div>
 <div id="menuLounch"  style={{display: 'none'}}>
 <div>
@@ -88,7 +87,7 @@ class Content extends Component {
 
 <div className="divSidedich">Bebidas</div>
 <div><BurgerDrinks /></div>
-<div className="order"><button className="addOrder" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
+<div className="order"><button className="buttonAddSend" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
 </div>
 
   </div>

@@ -51,7 +51,7 @@ return(
             <div className="burgerTypes">Agregado</div>
             <div className="burgerTypes">Acompañamiento</div>
             <div className="burgerOptions">
-                <select  className="selectButton" id="burgerTypes" onChange={event => this.setState({ tipo: event.target.value})}>
+                <select  className="buttonAddFood" id="burgerTypes" onChange={event => this.setState({ tipo: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="Res">Res</option>
                     <option value="Vegetariana">Vegetariana</option>
@@ -59,21 +59,21 @@ return(
                 </select>
             </div>
             <div className="burgerOptions">
-                <select className="selectButton"id="burgerSize" onChange={event => this.setState({ tamaño: event.target.value})} >
+                <select className="buttonAddFood"id="burgerSize" onChange={event => this.setState({ tamaño: event.target.value})} >
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="Simple">Simple</option>
                     <option value="Doble">Doble</option>
                 </select>
             </div>
             <div className="burgerOptions">
-                <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ agregado: event.target.value})}>
+                <select className="buttonAddFood" id="burgerAgreg" onChange={event => this.setState({ agregado: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="Huevos">Huevos</option>
                     <option value="Queso">Queso</option>
                 </select>
             </div>
             <div className="burgerOptions">
-            <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ acompañamiento: event.target.value})}>
+            <select className="buttonAddFood" id="burgerAgreg" onChange={event => this.setState({ acompañamiento: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="PapasFritas">Papas Fritas</option>
                     <option value="OnionRings">Onion Rings</option>
@@ -81,7 +81,7 @@ return(
                 </div>
             <div className="form-group"> 
                 <div className="col-sm-offset-2 col-sm-10">
-                  <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="selectButton" value="Agregar"/>
+                  <input type="submit" className="buttonAddAll" ref={(ref) => this.submitInput = ref} value={this.state.input} value="Agregar"/>
                 </div>
             </div>
             

@@ -1,6 +1,7 @@
 {
   "projects": {
     "Burger": "burguer-reina",
-    "Burgerqueen": "burguer-reina"
+    "Burgerqueen": "burguer-reina",
+    "burgerqueen": "burguer-reina"
   }
 }

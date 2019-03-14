@@ -50,21 +50,21 @@ return(
             <div className="drinksTypes">Agua</div>
             <div className="drinksTypes">Gaseosa</div>
             <div className="drinksTypes">
-                <select  className="selectButton" id="burgerTypes" onChange={event => this.setState({ ml: event.target.value})}>
+                <select  className="buttonAddDrinks" id="burgerTypes" onChange={event => this.setState({ ml: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="500 ml">500 ml</option>
                     <option value="750 ml">750 ml</option>
                 </select>
             </div>
             <div className="drinksOptions">
-                <select className="selectButton"id="burgerSize" onChange={event => this.setState({ agua: event.target.value})} >
+                <select className="buttonAddDrinks"id="burgerSize" onChange={event => this.setState({ agua: event.target.value})} >
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="Con gas">Con gas</option>
                     <option value="Sin gas">Sin gas</option>
                 </select>
             </div>
             <div className="drinksOptions">
-                <select className="selectButton" id="burgerAgreg" onChange={event => this.setState({ gaseosa: event.target.value})}>
+                <select className="buttonAddDrinks" id="burgerAgreg" onChange={event => this.setState({ gaseosa: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="Coca-cola">Coca-cola</option>
                     <option value="Fanta">Fanta</option>
@@ -76,7 +76,7 @@ return(
             </div>
             <div className="form-group"> 
                 <div className="col-sm-offset-2 col-sm-10">
-                  <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="selectButton" value="Agregar"/>
+                  <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="buttonAddAll" value="Agregar"/>
                 </div>
             </div>
             
