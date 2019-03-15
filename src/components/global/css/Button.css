@@ -4,13 +4,16 @@
     height: 150px;
     width: 150px;
     margin-left: 21%;
+    border-radius: 12px;
 }
 
 .buttonAdd{
-    background-color: #f44336;
-    font-size: 20px;
+    background-color: white;
+    font-size: 40px;
     height: 50px;
     width: 50px;
+    color: black;
+    border-radius: 12px;
 }
 
 .buttonAddSend{
@@ -18,13 +21,16 @@
     font-size: 20px;
     height: 50px;
     width: 120px;
+    color: white;
+    border-radius: 12px;
 }
 
 .buttonAddFood{
-    background-color:red;
+    background-color:white;
     font-size: 20px;
     height: 25px;
     width: 75px;
+    color: black;
 }
 
 .buttonAddAll{
@@ -32,13 +38,16 @@
     font-size: 20px;
     height: 25px;
     width: 100px;
-    margin-top: 3%;
+    margin-top: 3.5%;
     margin-left: 83%;
+    color: white;
+    border-radius: 12px;
 }
 
 .buttonAddDrinks{
-    background-color:red;
+    background-color:white;
     font-size: 20px;
     height: 25px;
-    width: 75px;
+    width: 100px;
+    color: black;
 }

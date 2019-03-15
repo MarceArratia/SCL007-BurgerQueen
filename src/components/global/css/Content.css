@@ -1,9 +1,9 @@
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
   .Content {
-    background-color: #282c34;
-    min-height: 75vh;
-    padding: 5%;
+    background-color: black; 
+    min-height: 80vh;
+    padding: 3%;
     flex-direction: column;
     justify-content: center;
     font-size: calc(10px + 2vmin);
@@ -45,7 +45,7 @@
   }
   
   .divSidedich{
-    margin-top: 2%;
+    margin-top: 7%;
   }
 }
 

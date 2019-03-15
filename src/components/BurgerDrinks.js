@@ -46,9 +46,9 @@ render(){
 return(
     <div className="container">
         <form className="form-horizontal" role="form" onSubmit={this.onSubmit.bind(this)}>
-            <div className="drinksTypes">ml</div>
-            <div className="drinksTypes">Agua</div>
-            <div className="drinksTypes">Gaseosa</div>
+            <div className="drinksTypesTwo">ml</div>
+            <div className="drinksTypesTwo">Agua</div>
+            <div className="drinksTypesTwo">Gaseosa</div>
             <div className="drinksTypes">
                 <select  className="buttonAddDrinks" id="burgerTypes" onChange={event => this.setState({ ml: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
