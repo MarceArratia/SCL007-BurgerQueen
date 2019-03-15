@@ -49,7 +49,7 @@ return(
             <div className="drinksTypesTwo">ml</div>
             <div className="drinksTypesTwo">Agua</div>
             <div className="drinksTypesTwo">Gaseosa</div>
-            <div className="drinksTypes">
+            <div className="drinksOptions">
                 <select  className="buttonAddDrinks" id="burgerTypes" onChange={event => this.setState({ ml: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
                     <option value="500 ml">500 ml</option>

@@ -2,6 +2,8 @@
   "projects": {
     "Burger": "burguer-reina",
     "Burgerqueen": "burguer-reina",
-    "burgerqueen": "burguer-reina"
+    "burgerqueen": "burguer-reina",
+    "burgerQueen": "burguer-reina",
+    "default": "burguer-reina"
   }
 }

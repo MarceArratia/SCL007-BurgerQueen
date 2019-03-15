@@ -4,7 +4,7 @@
     height: 150px;
     width: 150px;
     margin-left: 21%;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 .buttonAdd{
@@ -39,7 +39,7 @@
     height: 25px;
     width: 100px;
     margin-top: 3.5%;
-    margin-left: 83%;
+    margin-left: 75%;
     color: white;
     border-radius: 12px;
 }

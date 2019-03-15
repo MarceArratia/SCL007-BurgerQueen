@@ -2,14 +2,17 @@
 @media screen and (min-width: 600px) and (max-width: 1024px){
   .Content {
     background-color: black; 
-    min-height: 80vh;
-    padding: 3%;
+    min-height: 70vh;
+    padding: 8%;
     flex-direction: column;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
   }
-  
+  .selectFood{
+   display: inline-block;
+   margin-left: 16%;
+  }
   .sendOrder{
     font-size: 30px;
       color: black;
@@ -23,7 +26,7 @@
   }
   
   .divTypes{
-    width: 33%;
+    width: 50%;
     align-content: center;   
     display: inline-block;   
   }
@@ -36,7 +39,7 @@
   }
   
   .menuTitle{
-    margin-left: 48%;
+    margin-left: 44%;
   }
   
   .addOrder{
@@ -47,19 +50,31 @@
   .divSidedich{
     margin-top: 7%;
   }
+  .menuTitleBurger{
+    margin-left: 38%;
+    font-size: 35px;
+  }
+  .menuTitleDrinks{
+    margin-left: 44%;
+    font-size: 35px;
+    margin-top: 5%;
+  }
 }
 
 @media screen and (min-width: 1025px){
   .Content {
-    background-color: #282c34;
-    min-height: 75vh;
-    padding: 5%;
+    background-color: black; 
+    min-height: 80vh;
+    padding: 3%;
     flex-direction: column;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
   }
-  
+  .selectFood{
+   display: inline-block;
+   margin-left: 16%;
+  }
   .sendOrder{
     font-size: 30px;
       color: black;
@@ -73,7 +88,7 @@
   }
   
   .divTypes{
-    width: 33%;
+    width: 50%;
     align-content: center;   
     display: inline-block;   
   }
@@ -86,7 +101,7 @@
   }
   
   .menuTitle{
-    margin-left: 42%;
+    margin-left: 44%;
   }
   
   .addOrder{
@@ -95,6 +110,15 @@
   }
   
   .divSidedich{
-    margin-top: 2%;
+    margin-top: 7%;
+  }
+  .menuTitleBurger{
+    margin-left: 38%;
+    font-size: 35px;
+  }
+  .menuTitleDrinks{
+    margin-left: 44%;
+    font-size: 35px;
+    margin-top: 5%;
   }
 }
