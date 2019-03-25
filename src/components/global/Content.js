@@ -29,9 +29,11 @@ class Content extends Component {
   }
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
+    document.getElementById('buttonLunch').style.display="none";
   }
   lounchButton(){
     document.getElementById('menuLounch').style.display="block";
+    document.getElementById('buttonBreakfast').style.display="none";
   }
 
   ordenKitchen(){
@@ -63,10 +65,8 @@ class Content extends Component {
       <div className="Content">
         <div><input  type="text" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
         <div className="menuTitle"><h3>Menú</h3></div>
-        <div >
-        <img className="buttonAll" src={require("../../imag/breakfast.jpg")} onClick={this.breakfastButton}/>
-        <img className="buttonAll" src={require("../../imag/lunch.png")} onClick={this.lounchButton}/>
-        </div>
+        <div id="buttonBreakfast" className="selectFood"><img className="buttonAll" src={require("../../imag/breakfast.jpg")} onClick={this.breakfastButton}/></div>
+        <div id="buttonLunch"  className="selectFood"><img className="buttonAll" src={require("../../imag/lunch.png")} onClick={this.lounchButton}/></div>
         
 <div id="menuBreakfast" style={{display: 'none'}}> 
 <div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
@@ -78,14 +78,14 @@ class Content extends Component {
 <div id="menuLounch"  style={{display: 'none'}}>
 <div>
   <p></p>
-<div className="divTypes">Hamburguesas</div>
+<div className="menuTitleBurger">Hamburguesas</div>
   <p></p>
 
 </div>
 
 <BurgerOrder />
 
-<div className="divSidedich">Bebidas</div>
+<div className="menuTitleDrinks">Bebidas</div>
 <div><BurgerDrinks /></div>
 <div className="order"><button className="buttonAddSend" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
 </div>
