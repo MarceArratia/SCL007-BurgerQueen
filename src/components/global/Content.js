@@ -10,7 +10,6 @@ import JugoNatural from '../Count';
 import {DB_CONFIG} from '../../Initializers/firebase';
 import firebase from 'firebase';
 import BurgerDrinks from '../BurgerDrinks';  
-
 import BurgerOrder from '../BurgerOrder';
 
 
@@ -71,7 +70,7 @@ class Content extends Component {
         <div id="buttonBreakfast" className="selectFood"><img className="buttonAll" src={require("../../imag/breakfast.jpg")} onClick={this.breakfastButton}/></div>
         <div id="buttonLunch"  className="selectFood"><img className="buttonAll" src={require("../../imag/lunch.png")} onClick={this.lounchButton}/></div>
         
-<div id="menuBreakfast" style={{display: 'none'}}> 
+<div id="menuBreakfast" class="fondBreakfast" style={{display: 'none'}}> 
   <div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
   <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
   <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>

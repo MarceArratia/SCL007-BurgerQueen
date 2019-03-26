@@ -1,8 +1,8 @@
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
   .Content {
-    background-color: black; 
-    min-height: 70vh;
+    background-color: #0a0a0a69; 
+    min-height: 83vh;
     padding: 8%;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +21,9 @@
   
   .order{
     align-content: center;
-    margin-left: 80%;
+    margin-left: 70%;
     margin-top: 5%;
+    padding: 5%;
   }
   
   .divTypes{
@@ -40,6 +41,7 @@
   
   .menuTitle{
     margin-left: 44%;
+    padding: 5%
   }
   
   .addOrder{
@@ -58,6 +60,11 @@
     margin-left: 44%;
     font-size: 35px;
     margin-top: 5%;
+  }
+
+  .fondBreakfast{
+    background:#eceae887;
+
   }
 }
 
