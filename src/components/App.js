@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import {DB_CONFIG} from '../Initializers/firebase';
 
 //Data
-import items from '../data/Login';
+
 class App extends Component {
   constructor(){
     super()
@@ -78,7 +78,7 @@ class App extends Component {
       </div>
     
       <div className="App" style={{display: 'none'}} id="home">
-      <Header title="Burguer Queen" items={items}/>
+      <Header title="Burguer Queen"/>
       <Content/>
       <Footer copyright ="&copy; Burguer Queen 2019"/>
       </div>
