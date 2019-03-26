@@ -28,7 +28,7 @@
     "not op_mini all"
   ],
   "description": "## Preámbulo",
-  "main": "index.html",
+  "main": "login.html",
   "devDependencies": {},
   "repository": {
     "type": "git",

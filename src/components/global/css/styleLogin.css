@@ -7,7 +7,7 @@
 }
 
 body{
-    background: url(../IMG/fondo.jpeg);
+    background: url(../../../imag/fondo.jpeg);
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
@@ -24,7 +24,7 @@ body{
     color: #fff;
     border-radius: 5px;
 
-    padding: 40px;
+   /* padding: 40px;*/
 }
 
 .container-form .toggle{
@@ -47,7 +47,7 @@ body{
     letter-spacing: 1px;
 }
 
-.container-form .toggle:hover{
+.container-form .toggle:hover {
     border-top: 2px solid #0075d9;
     border-bottom: 2px solid #0075d9;
 }
@@ -59,9 +59,9 @@ body{
     line-height: 1;
 }
 
-.contenedor-form input[type="text"],
-.contenedor-form input[type="password"],
-.contenedor-form input[type="email"]{
+.container-form input[type="text"],
+.container-form input[type="password"],
+.container-form input[type="email"]{
     outline:none;
     background: rgba(0,0,0,.5);
     display:block;
@@ -78,13 +78,13 @@ body{
     transition: all .5s ease;
 }
 
-.contenedor-form input[type="text"]:focus,
-.contenedor-form input[type="password"]:focus,
-.contenedor-form input[type="email"]:focus,{
+.container-form input[type="text"]:focus,
+.container-form input[type="password"]:focus,
+.container-form input[type="email"]:focus{
     border-bottom: 4px solid #0075d9;
 }
 
-.contenedor-form input[type="submit"]{
+.container-form input[type="button"]{
     background: #ff851b;
     color: #fff;
     border: none;
@@ -95,13 +95,14 @@ body{
     letter-spacing: 1px;
     font-size: 16px;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-.container-form input[type="submit"]:hover{
+.container-form input[type="button"]:hover{
     background: rgba(0,117,217,0.7);
 }
 
-.contenedor-form .reset-password{
+.container-form .reset-password{
     background: rgba(0,117,217,0.7);
     width: 100%;
     padding: 15px 0;
@@ -110,6 +111,20 @@ body{
     border-bottom-left-radius: 5px;
 }
 
+.container-form .reset-password a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
 
+.container-form .divForm {
+    padding: 40px;
+    display: none;
+
+}
+
+.container-form .divForm:nth-child(2) {
+    display: block;
+}
 
 

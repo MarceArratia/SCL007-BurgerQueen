@@ -12,6 +12,8 @@ import firebase from 'firebase';
 import BurgerDrinks from '../BurgerDrinks';  
 
 import BurgerOrder from '../BurgerOrder';
+
+
 //Menú desayuno y almuerzo
 class Content extends Component {
   sendOrderBreakfast(){
@@ -23,7 +25,7 @@ class Content extends Component {
       "JugoNatural:"+document.getElementById("naturalJuice").innerHTML  
     ];
 
-   firebase.initializeApp(DB_CONFIG);
+   //firebase.initializeApp(DB_CONFIG);
     let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
     refmessageAnswer.push({arrayJson});
   }
@@ -62,18 +64,19 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="Content">
+    
+      <div className="Content" >
         <div><input  type="text" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
         <div className="menuTitle"><h3>Menú</h3></div>
         <div id="buttonBreakfast" className="selectFood"><img className="buttonAll" src={require("../../imag/breakfast.jpg")} onClick={this.breakfastButton}/></div>
         <div id="buttonLunch"  className="selectFood"><img className="buttonAll" src={require("../../imag/lunch.png")} onClick={this.lounchButton}/></div>
         
 <div id="menuBreakfast" style={{display: 'none'}}> 
-<div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
-<div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
-<div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
-<div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
-<div className="order"><button className="buttonAddSend" onClick={this.sendOrderBreakfast}>Enviar</button></div>
+  <div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
+  <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
+  <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
+  <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
+  <div className="order"><button className="buttonAddSend" onClick={this.sendOrderBreakfast}>Enviar</button></div>
 </div>
 <div id="menuLounch"  style={{display: 'none'}}>
 <div>
@@ -91,6 +94,7 @@ class Content extends Component {
 </div>
 
   </div>
+
     );
   }
 }

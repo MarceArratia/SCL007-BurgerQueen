@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+import '../components/global/css/styleLogin.css';
+class Login extends React.Component {
+ 
+    render(){
+        return(
+          <div>
+           
+            <div className="divForm" id="sesionInit" style={{display: 'block'}}>
+                <h2>Iniciar Sesión</h2>
+                    <input type="text" id="usersLogin" placeholder="Usuario" required />
+                    <input type="password" id="passwordLogin" placeholder="Contraseña" required />        
+                </div>
+            <div className="divForm" id="createAccount" style={{display: 'none'}}>
+               
+                <h2>Crea tu Cuenta</h2>
+                    <input type="email" placeholder="Correo Electrónico" id="emailRegister" required />    
+                    <input type="password" placeholder="Contraseña" id="passwordRegister" required />
+                    <input type="password" placeholder="Teléfono" required />
+                   
+
+            </div>
+            </div>
+        )
+
+    }
+    
+}
+export default Login;

@@ -10,24 +10,27 @@
 <body>
     <div class="container-form">
     <div class="toggle">
-<span>Crear Cuenta</span>
+<span id="buttonAccount">Crear Cuenta</span>
     </div>
-    <div class="divForm">
+    <div class="divForm" id="sesionInit">
         <h2>Iniciar Sesión</h2>
         <form action="#">
-            <input type="text" placeholder="Usuario" required>
-            <input type="password" placeholder="Contraseña" required>
-            <input type="submit" value="Iniciar sesión">
+            <input type="text" id="usersLogin" placeholder="Usuario" required>
+            <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+            <input type="button" id="buttonLogin" value="Iniciar sesión">
         </form>
         </div>
-    <div class="divForm">
+    <div class="divForm" id="createAccount">
+            <div class="toggle">
+        <span id="buttonBack">Crear Cuenta</span>
+    </div>
         <h2>Crea tu Cuenta</h2>
         <form action="#">
             <input type="text" placeholder="Usuario" required>
             <input type="password" placeholder="Contraseña" required>
             <input type="email" placeholder="Correo Electrónico" required>
             <input type="text" placeholder="Teléfono" required>
-            <input type="submit" value="Registrarse">
+            <input type="button" value="Registrarse">
         </form> 
     </div>
     <div class="reset-password">
@@ -35,5 +38,7 @@
 
     </div>
 </div>
+<script src="main.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 </body>
 </html>
