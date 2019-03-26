@@ -11,12 +11,11 @@ class Header extends Component {
     items: PropTypes.array.isRequired
   };
   render() {
-    const { title, items} = this.props;
+    const { title,} = this.props;
 //key guarda la posición de cada elemento en el array
     return (
       <div className="Header">
       <h1>{title}</h1>
-      
 
       </div>
     );

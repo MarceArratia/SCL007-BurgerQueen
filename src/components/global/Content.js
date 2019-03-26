@@ -77,7 +77,7 @@ class Content extends Component {
   <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
   <div className="order"><button className="buttonAddSend" onClick={this.sendOrderBreakfast}>Enviar</button></div>
 </div>
-<div id="menuLounch"  style={{display: 'none'}}>
+<div id="menuLounch" class="fondLuch"  style={{display: 'none'}}>
 <div>
   <p></p>
 <div className="menuTitleBurger">Hamburguesas</div>

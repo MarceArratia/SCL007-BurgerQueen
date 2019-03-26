@@ -1,7 +1,7 @@
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
   .Content {
-    background-color: #0a0a0a69; 
+    background-color: #8881814d; 
     min-height: 83vh;
     padding: 8%;
     flex-direction: column;
@@ -65,6 +65,10 @@
   .fondBreakfast{
     background:#eceae887;
 
+  }
+
+  .fondLuch{
+    background:#eceae887;
   }
 }
 
