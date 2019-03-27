@@ -118,8 +118,9 @@ body{
 }
 
 .container-form .divForm {
-    padding: 40px;
+    padding: 60px;
     display: none;
+    margin-top: 50%;
 
 }
 

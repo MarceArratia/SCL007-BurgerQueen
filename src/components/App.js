@@ -10,6 +10,8 @@ import Login from '../components/Login'
 import firebase from 'firebase';
 import {DB_CONFIG} from '../Initializers/firebase';
 
+import 'materialize-css/dist/css/materialize.min.css';
+
 //Data
 
 class App extends Component {
@@ -19,7 +21,6 @@ class App extends Component {
    
   }
   loginFunction(){
-    console.log("hola");
     
     let email=document.getElementById("usersLogin").value;
     let password=document.getElementById("passwordLogin").value;

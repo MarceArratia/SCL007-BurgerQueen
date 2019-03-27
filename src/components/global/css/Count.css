@@ -4,15 +4,17 @@
 }
 
 .divSecond{
-    width: 18%;
+    width: 17%;
     align-content: center;   
     display: inline-block;   
-    margin-top: 8%;
+    margin-top: 6%;
+    color: black;
+    font-size: 50px;
 }
 
 .divTitle{
     width: 45%;
     display: inline-block;
     color: black;
-
+    margin-left: 3%;
 }
