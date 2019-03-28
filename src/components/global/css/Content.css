@@ -66,7 +66,9 @@
   }
 
   .fondBreakfast{
-    background:#eceae887;
+    background: #eceae887;
+    padding: 4%;
+    margin-left: 10%;
   }
 
   .fondLuch{
