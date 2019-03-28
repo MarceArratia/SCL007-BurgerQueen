@@ -7,11 +7,10 @@ import './css/Header.css';
 
 class Header extends Component {
   static propTypes ={
-    title: PropTypes.string.isRequired,
-    items: PropTypes.array.isRequired
+    title: PropTypes.string.isRequired
   };
   render() {
-    const { title,} = this.props;
+    const { title} = this.props;
 //key guarda la posición de cada elemento en el array
     return (
       <div className="Header">

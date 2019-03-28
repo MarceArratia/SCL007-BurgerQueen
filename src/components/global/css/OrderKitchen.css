@@ -1,4 +1,4 @@
-#accordion section p {
+#accordion section ul {
     display: none;
     text-align: center;
 }
@@ -12,7 +12,7 @@
     text-decoration: underline;
    
 }
-#accordion section:target p {
+#accordion section:target ul  {
     display: block;
    
 }

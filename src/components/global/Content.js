@@ -15,19 +15,22 @@ import OrderKitchen from '../OrderKitchen';
 
 
 //Menú desayuno y almuerzo
-class Content extends Component {
+class Content extends Component { 
   sendOrderBreakfast(){
-    let arrayJson=[
-      "Cliente:"+document.getElementById("textCliente").value,
-      "Desayuno:","CafeAmericano:"+document.getElementById("coffeAmerican").innerHTML,
-      "CafeConLeche:"+document.getElementById("coffeMilk").innerHTML,
-      "Sandwich:"+document.getElementById("sandwichCheesse").innerHTML,
-      "JugoNatural:"+document.getElementById("naturalJuice").innerHTML  
-    ];
-
-   //firebase.initializeApp(DB_CONFIG);
-    let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
-    refmessageAnswer.push({arrayJson});
+    let hora=new Date();
+    hora=hora.getHours()+":"+hora.getMinutes()+","+hora.getDay()+"/"+hora.getMonth()+1+"/"+hora.getFullYear();
+    let refmessageAnswer= firebase.database().ref();
+    refmessageAnswer.push({
+    Cliente:document.getElementById("textCliente").value,
+    CafeAmericano:document.getElementById("coffeAmerican").innerHTML,
+    CafeConLeche:document.getElementById("coffeMilk").innerHTML,
+    Sandwich:document.getElementById("sandwichCheesse").innerHTML,
+    JugoNatural:document.getElementById("naturalJuice").innerHTML,
+    tipo:1,
+    fechaHoraInicio:hora,
+    estado:1,
+    fechaHoraFin:""
+  });
   }
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
@@ -41,27 +44,40 @@ class Content extends Component {
   }
 
   ordenKitchen(){
-    let orderKitchen=[];
+    let orderKitchen="";
     let tableBurger=document.getElementById("burguerOrder");
     let orderBurger=tableBurger.getElementsByTagName('tr');
     for(let i=0;i<orderBurger.length;i++){
       if(orderBurger[i].innerText !=="<tbody></tbody>"){
-        console.log(orderBurger[i].innerText);
-        orderKitchen.push(orderBurger[i].innerText);
+        orderKitchen+=orderBurger[i].innerText+";";
+        orderKitchen=String(orderKitchen).replace('X','');
       }
     }
+    let sendDrinks="";
     let tableDrinks=document.getElementById('orderDrinks');
     let tdDrinks=tableDrinks.getElementsByTagName('tr');
     for(let i=0; i<tdDrinks.length;i++){
       if(tdDrinks[i].innerText !=="<tbody></tbody>"){
-        console.log(tdDrinks[i].innerText);
-        orderKitchen.push(tdDrinks[i].innerText);
+        sendDrinks+=tdDrinks[i].innerText+";";
+        sendDrinks=String(sendDrinks).replace('X','');
       }
     }
-    firebase.initializeApp(DB_CONFIG);
-    let refmessageAnswer= firebase.database().ref().child(document.getElementById("textCliente").value);
-    refmessageAnswer.push({orderKitchen});
- 
+    let hora=new Date();
+    hora=hora.getHours()+":"+hora.getMinutes()+","+hora.getDay()+"/"+hora.getMonth()+1+"/"+hora.getFullYear();
+
+    //firebase.initializeApp(DB_CONFIG);
+    let refmessageAnswer= firebase.database().ref();
+    refmessageAnswer.push({ 
+      cliente:document.getElementById("lunchCliente").value,
+      estado:1,
+      fechaHoraFin:"",
+      fechaHoraInicio:hora,
+      tipo:2,
+      detalle:orderKitchen,
+      bebidas:sendDrinks
+
+    });
+
   }
 
   orderWaiter(){
@@ -78,17 +94,18 @@ class Content extends Component {
     return (
     <div>
       <div id="orderChef" className="Content" >
-        <div id="buttonWaiter" className="selectFood"><img className="buttonEmployed" src={require("../../imag/mesero.jpg")} onClick={this.orderWaiter}/></div>
-        <div id="buttonChef" className="selectFood"><img className="buttonEmployed" src={require("../../imag/chef.gif")} onClick={this.orderKitchenDiv}/></div>
+        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiters.jpg")} onClick={this.orderWaiter}/></div>
+        <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/chef.gif")} onClick={this.orderKitchenDiv}/></div>
       </div>
       <div id="orderK" style={{display: 'none'}}>
       <OrderKitchen />
       </div> 
       <div id="orderWaiter" className="Content" style={{display: 'none'}} >
-        <div id="buttonBreakfast" className="selectFood"><img className="buttonAll" src={require("../../imag/breakfast1.jpeg")} onClick={this.breakfastButton}/></div>
-        <div id="buttonLunch"  className="selectFood"><img className="buttonAll" src={require("../../imag/burguer.jpeg")} onClick={this.lounchButton}/></div>
+        <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAll" src={require("../../imag/breakfast1.jpeg")} onClick={this.breakfastButton}/></div>
+        <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAll" src={require("../../imag/burguer.jpeg")} onClick={this.lounchButton}/></div>
      
 <div id="menuBreakfast" className="fondBreakfast" style={{display: 'none'}}> 
+
 <div className="menuTitle"><h2>Menú</h2></div>
 <div><input  type="text" className="divForm" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
   <div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
@@ -100,7 +117,9 @@ class Content extends Component {
 <div id="menuLounch" className="fondLuch"  style={{display: 'none'}}>
 <div>
   <p></p>
+  <div><input  type="text" className="divForm" placeholder="Ingrese nombre cliente" id="lunchCliente"/></div>
 <div className="menuTitleBurger">Hamburguesas</div>
+
   <p></p>
 
 </div>

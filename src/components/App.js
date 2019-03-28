@@ -10,7 +10,7 @@ import Login from '../components/Login'
 import firebase from 'firebase';
 import {DB_CONFIG} from '../Initializers/firebase';
 
-import 'materialize-css/dist/css/materialize.min.css';
+
 
 //Data
 
@@ -72,7 +72,7 @@ class App extends Component {
        <input type="button" id="buttonLogin" value="Iniciar sesión" onClick={this.loginFunction}/>
        <input type="button" value="Registrarse" style={{display: 'none'}} id="registerUser" onClick={this.buttonRegisterUser}/>
        <div className="reset-password">
-                <a href="#">Olvide mi Contraseña</a>
+                <a href>Olvide mi Contraseña</a>
         
             </div>
        </div>
