@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../components/global/css/styleLogin.css';
-class Login extends React.Component {
+class Login extends Component {
  
     render(){
         return(

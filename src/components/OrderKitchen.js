@@ -1,44 +1,91 @@
 import React, { Component } from 'react';
 import '../components/global/css/OrderKitchen.css'
+import firebase from 'firebase';
 
+//orderKitchen para utilizar las ordenes de la cocina
 class OrderKitchen extends Component {
-  constructor() {
-    super();
-
-   
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    }
+    let arrayBurguer=[];
+    let arrayDrink=[];
   }
-
+  //primera función que se ejecuta despues de que orderKitchen haya renderizado
+  componentWillMount() {
+    let data=[];
+    const refName=firebase.database().ref();
+    refName.on('value',(snapshot)=>{ //snapchot estado de la data,siempre esta mirando la data
+      snapshot.forEach(function(childSnapshot) {
+        let item = childSnapshot.val();//informacion del pedido
+        item.key = childSnapshot.key;
+        data.push(item);    
+      })
+      this.setState(prevState => { //setState asigna valor al estado, prevState comprueba estado anterior del estado
+        return { data: [...prevState.data, ...data] };
+      });
+    })   
+  }
+  actualizar(event,key){
+    console.log(event);
+   let hora=new Date();
+    hora=hora.getHours()+":"+hora.getMinutes()+","+hora.getDay()+"/"+hora.getMonth()+1+"/"+hora.getFullYear();
+    let refmessage=firebase.database().ref().child(event);
+        refmessage.update({
+          estado:2,
+          fechaHoraFin:hora
+        });
+      var temp = this.state.data.filter((el)=>el.key !== event);
+      this.setState({
+        data: temp
+      })       
+  }
+ 
   render() {
     return(
       <div className="contentOrder">
    <main id="accordion">
-   <section id="pedido1">
-   <a href="#pedido1"><h1>Pedido1</h1></a>
-   <p>
-     Café helado 1
-     Sandwich 2
-     Jugo 3
-   </p>
-   </section>
-
-   <section id="pedido2">
-   <a href="#pedido2"><h1>Pedido2</h1></a>
-   <p>
-     Café helado 2
-     Sandwich 1
-     Jugo 7
-   </p>
-   </section>
-
-   <section id="pedido3">
-   <a href="#pedido3"><h1>Pedido3</h1></a>
-   <p>
-     Café Americano 4
-     Sandwich 1
-     Jugo 0
-   </p>
-   </section>
-   </main>
+   {this.state.data.map(task=>{//buscando data
+            if(task.tipo===1 && task.estado===1){//task arreglos de los hijos,si estado es 1 lo dibuja
+              return (
+                <section id={task.Cliente}>
+                <a href={"#"+task.Cliente}><h1>{task.Cliente} {task.fechaHoraInicio}</h1></a>
+                <ul id={task.key}>
+                  <li>Cafe Americano : {task.CafeAmericano}</li>
+                  <li>Cafe con Leche : {task.CafeConLeche}</li>
+                  <li>Jugo Natural : {task.JugoNatural}</li>
+                  <li>Sandwich : {task.Sandwich}</li>
+                </ul>
+              <button id={task.key} onClick={this.actualizar.bind(this,task.key)}>Terminar Pedido</button>
+                </section>
+              )
+            }
+            if(task.tipo===2 && task.estado===1){
+              return(
+                <section id={task.cliente}>
+                <a href={"#"+task.cliente}><h1>{task.cliente} {task.fechaHoraInicio}</h1></a>
+                {this.arrayBurguer=String(task.detalle).split(';').map(burguerFor=>{
+                  return(
+                    <ul>
+                      <li>{burguerFor}</li>
+                    </ul>)
+                })
+                }
+                {this.arrayDrink=String(task.bebidas).split(';').map(drinkFor=>{
+                  return(
+                    <ul>
+                      <li>{drinkFor}</li>
+                    </ul>)
+                })
+                }
+              <button id={task.key} onClick={this.actualizar.bind(this,task.key)}>Terminar Pedido</button>
+                </section>
+              )
+            }
+           return "";
+            })}
+    </main>
    </div>
   )}
 }

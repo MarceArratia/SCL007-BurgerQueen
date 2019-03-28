@@ -81,13 +81,13 @@ return(
                 </div>
             <div className="form-group"> 
                 <div className="col-sm-offset-2 col-sm-10">
-                  <input type="submit" className="buttonAddAll" ref={(ref) => this.submitInput = ref} value={this.state.input} value="Agregar"/>
+                  <input type="submit" value="Agregar" className="buttonAddAll" ref={(ref) => this.submitInput = ref} />
                 </div>
             </div>
             
             <input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
         </form>
-        <div className="container" >	
+        <div className="containerOrder" >	
             <table id="burguerOrder" className="table table-hover">
                 <tbody>    
                     {this.state.pedido.map((data,index) => {                 

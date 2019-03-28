@@ -66,6 +66,7 @@ return(
             <div className="drinksOptions">
                 <select className="buttonAddDrinks" id="burgerAgreg" onChange={event => this.setState({ gaseosa: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
+                    <option value="Coca-cola">Agua Mineral</option>
                     <option value="Coca-cola">Coca-cola</option>
                     <option value="Fanta">Fanta</option>
                     <option value="Orange Crush">Orange Crush</option>
@@ -76,13 +77,13 @@ return(
             </div>
             <div className="form-group"> 
                 <div className="col-sm-offset-2 col-sm-10">
-                  <input type="submit"  ref={(ref) => this.submitInput = ref} value={this.state.input} className="buttonAddAll" value="Agregar"/>
+                  <input type="submit"  ref={(ref) => this.submitInput = ref} value="Agregar" className="buttonAddAll"/>
                 </div>
             </div>
             
             <input type="hidden" className="row-ref" value="" ref={(ref) => this.rowRef = ref}/>
         </form>
-        <div className="container" >	
+        <div className="containerOrder" >	
             <table id="orderDrinks" className="table table-hover">
                 <tbody>    
                     {this.state.pedido.map((data,index) => {                 
