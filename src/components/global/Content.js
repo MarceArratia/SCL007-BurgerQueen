@@ -94,15 +94,15 @@ class Content extends Component {
     return (
     <div>
       <div id="orderChef" className="Content" >
-        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiters.jpg")} onClick={this.orderWaiter}/></div>
-        <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/chef.gif")} onClick={this.orderKitchenDiv}/></div>
+        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.jpg")} onClick={this.orderWaiter}/></div>
+        <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/></div>
       </div>
       <div id="orderK" style={{display: 'none'}}>
       <OrderKitchen />
       </div> 
       <div id="orderWaiter" className="Content" style={{display: 'none'}} >
-        <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAll" src={require("../../imag/breakfast1.jpeg")} onClick={this.breakfastButton}/></div>
-        <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAll" src={require("../../imag/burguer.jpeg")} onClick={this.lounchButton}/></div>
+        <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAllCoffe" src={require("../../imag/coffe.png")} onClick={this.breakfastButton}/></div>
+        <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAllBurger" src={require("../../imag/burger.png")} onClick={this.lounchButton}/></div>
      
 <div id="menuBreakfast" className="fondBreakfast" style={{display: 'none'}}> 
 

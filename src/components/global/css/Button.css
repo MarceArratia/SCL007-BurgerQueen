@@ -1,9 +1,27 @@
 .buttonAll{
     background-color: #ff851b;
     font-size: 20px;
-    height: 300px;
-    width: 300px;
-    border-radius: 20px;
+    height: 310px;
+    width: 310px;
+    border-radius: 150px;
+   
+}
+
+.buttonAllCoffe{
+    background-color: #ff851b;
+    font-size: 20px;
+    height: 310px;
+    width: 310px;
+    border-radius: 150px;
+   
+}
+
+.buttonAllBurger{
+    background-color: #ff851b;
+    font-size: 20px;
+    height: 310px;
+    width: 310px;
+    border-radius: 150px;
    
 }
 
