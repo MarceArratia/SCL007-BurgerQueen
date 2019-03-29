@@ -67,38 +67,10 @@ nos comparten el siguiente correo recibido del cliente:
 
 ## Introducción
 
-Partiendo de los requerimientos de negocio detallados en el correo del cliente,
-nos piden construir **una interfaz que permita a lxs cajerxs tomar los pedidos
-en una tablet, y desde ahí se puedan enviar a cocina** a través de un backend del
-que nos darán detalles más adelante.
-
-El primer paso de este proyecto debe ser convertir el menú descrito por el
-cliente en una estructura que podamos poner en un archivo JSON para después
-_pintar_ en la pantalla.
-
-Nuestra interfaz debe mostrar los dos menús (desayuno y resto del día), cada uno
-con todos sus _productos_. El usuario debe poder ir eligiendo que _productos_
-agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el total.
-
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
 ## Objetivos
 
-El objetivo principal de aprendizaje de este proyecto es construir una
-_interfaz web_ usando el _framework_ elegido (React, Vue o Angular). Todos estos
-frameworks de front-end atacan el mismo problema: **cómo mantener la interfaz y
-el estado sincronizados**. Así que esta experiencia espera familiarizarse con
-el concepto de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
 
-Como objetivo secundario, la implementación debe además seguir las
-recomendaciones para PWAs (_Progressive Web Apps_), lo cual incluye conceptos
-como **offline**. Para guiarte con respecto a este tema te recomendamos usar
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es), que es
-una herramienta de Google que nos ayuda a asegurar que nuestras web apps sigan
-buenas prácticas. De hecho, usaremos Lighthouse a la hora de evaluar el
-proyecto.
 
 Finalmente, la interfaz debe estar diseñada específicamente para correr en
 **tablets**.

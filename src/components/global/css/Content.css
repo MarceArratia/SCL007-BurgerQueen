@@ -75,6 +75,19 @@
   .fondLuch{
     background:#f3f0ee91;
   }
+
+  .divImag{
+    text-align: center;
+    font-size: 60px;
+    background: #ff851b;
+    margin-left: 10%;
+  }
+  .divImagChef{
+    text-align: center;
+    font-size: 60px;
+    background: #ff851b;
+    margin-left: 20%;
+  }
 }
 
 @media screen and (min-width: 1025px){
@@ -152,4 +165,10 @@
 .divFormUser{
   height: 25px;
   font-size: 25px;
+}
+
+.divImag{
+  text-align: center;
+  font-size: 60px;
+  background: #ff851b;
 }

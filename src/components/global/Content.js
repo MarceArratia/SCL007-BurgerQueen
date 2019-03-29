@@ -103,17 +103,17 @@ class Content extends Component {
     <div>
       <div id="orderChef" style={{display: 'block'}} className="Content" >
       
-        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.png")}  onClick={this.orderWaiter}/></div>
+        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.png")}  onClick={this.orderWaiter}/><h3 className="divImag">Garzón</h3></div>
         
-        <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/></div>
+        <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/><h3 className="divImag">Chef</h3></div>
       </div>
       <div id="orderK" style={{display: 'none'}}>
         <OrderKitchen />
         <img alt="" className="buttonEmployedArrow" src={require("../../imag/arrow.jpg")} onClick={this.orderWaiterBack}/>
       </div> 
       <div id="orderWaiter" className="Content" style={{display: 'none'}} >
-        <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAllCoffe" src={require("../../imag/coffe.png")} onClick={this.breakfastButton}/></div>
-        <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAllBurger" src={require("../../imag/burger.png")} onClick={this.lounchButton}/></div>
+        <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAllCoffe" src={require("../../imag/coffe.png")} onClick={this.breakfastButton}/><h3 className="divImag">Desayuno</h3></div>
+        <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAllBurger" src={require("../../imag/burger.png")} onClick={this.lounchButton}/><h3 className="divImagChef">Almuerzo</h3></div>
       </div>
 <div id="menuBreakfast" className="fondBreakfast" style={{display: 'none'}}> 
 
