@@ -9,7 +9,7 @@
     color: white;
   }
   .selectFood{
-   display: inline-block;
+   display: inline-block !important;
    margin-left: 5%;
    margin-top: 30%;
   }
@@ -149,7 +149,7 @@
   }
 }
 
-.divForm{
+.divFormUser{
   height: 50px;
   font-size: 30px;
 }

@@ -33,6 +33,12 @@
     margin-left: 12%;
 }
 
+.buttonEmployedArrow{
+    height: 100px;
+    width: 100px;
+    border-radius: 150px;
+}
+
 .buttonAdd{
     background-color: #ff851b;
     font-size: 40px;

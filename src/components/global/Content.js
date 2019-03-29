@@ -34,8 +34,7 @@ class Content extends Component {
   }
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
-    document.getElementById('buttonLunch').style.display="none";
-    document.getElementById('buttonBreakfast').style.display="none";
+    document.getElementById('orderChef').style.display="none";
   }
   lounchButton(){
     document.getElementById('menuLounch').style.display="block";
@@ -83,6 +82,12 @@ class Content extends Component {
   orderWaiter(){
     document.getElementById('orderWaiter').style.display="block";
     document.getElementById('orderChef').style.display="none";
+
+  }
+  orderWaiterBack(){
+    document.getElementById("orderChef").style.display="block";
+
+ 
   }
   orderKitchenDiv(){
     
@@ -93,7 +98,7 @@ class Content extends Component {
   render() {
     return (
     <div>
-      <div id="orderChef" className="Content" >
+      <div id="orderChef" style={{display: 'block'}} className="Content" >
         <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.png")} onClick={this.orderWaiter}/></div>
         <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/></div>
       </div>
@@ -107,17 +112,18 @@ class Content extends Component {
 <div id="menuBreakfast" className="fondBreakfast" style={{display: 'none'}}> 
 
 <div className="menuTitle"><h2>Menú</h2></div>
-<div><input  type="text" className="divForm" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
+<div><input  type="text" className="divFormUser" placeholder="Ingrese nombre cliente" id="textCliente"/></div>
   <div><CafeAmericano id="coffeAmerican" name="Café Americano :"/></div>
   <div><CafeLeche id="coffeMilk" name="Café con Leche :"/></div>
   <div><SandwichJamon id="sandwichCheesse" name="Sandwich Jamón Queso :"/></div>
   <div><JugoNatural id="naturalJuice" name="Jugo Natural :"/></div>
+  <img alt="" className="buttonEmployedArrow" src={require("../../imag/arrow.jpg")} onClick={this.orderWaiterBack}/>
   <div className="order"><button className="buttonAddSend" onClick={this.sendOrderBreakfast}>Enviar</button></div>
 </div>
 <div id="menuLounch" className="fondLuch"  style={{display: 'none'}}>
 <div>
   <p></p>
-  <div><input  type="text" className="divForm" placeholder="Ingrese nombre cliente" id="lunchCliente"/></div>
+  <div><input  type="text" className="divFormUser" placeholder="Ingrese nombre cliente" id="lunchCliente"/></div>
 <div className="menuTitleBurger">Hamburguesas</div>
 
   <p></p>
@@ -128,7 +134,8 @@ class Content extends Component {
 
 <div className="menuTitleDrinks">Bebidas</div>
 <div><BurgerDrinks /></div>
-<img alt="" className="buttonEmployed" src={require("../../imagarrow.jpg")}/>
+<img alt="" className="buttonEmployedArrow" src={require("../../imag/arrow.jpg")} onClick={this.orderWaiterBack}/>
+
 <div className="order"><button className="buttonAddSend" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
 </div>
 
