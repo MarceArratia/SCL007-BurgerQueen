@@ -1,14 +1,13 @@
 .burgerTypes{
-    font-size: 25px;
+    font-size: 27px;
     display: inline-block; 
-    margin-left: 11%;
+    margin-left: 12%;
     color: black;
 }
 
 .burgerOptions{
     font-size: 20px;
     display: inline-block; 
-    margin-left: 10%;
     color:white;
 }
 
@@ -19,7 +18,7 @@
 .drinksOptions{
     font-size: 20px;
     display: inline-block; 
-    margin-left: 16.5%;
+    margin-left: 12%;
     color:white;
 }
 .drinksTypes{
@@ -30,4 +29,5 @@
 
 .containerOrder{
     background: #ff851b;
+    font-size: 30px;
 }

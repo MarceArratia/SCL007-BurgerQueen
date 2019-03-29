@@ -14,21 +14,25 @@ class OrderKitchen extends Component {
   }
   //primera función que se ejecuta despues de que orderKitchen haya renderizado
   componentWillMount() {
-    let data=[];
+    let dataOrder=[];
     const refName=firebase.database().ref();
-    refName.on('value',(snapshot)=>{ //snapchot estado de la data,siempre esta mirando la data
+    refName.on('value',(snapshot)=>{
+      dataOrder=[]; //snapchot estado de la data,siempre esta mirando la data
       snapshot.forEach(function(childSnapshot) {
         let item = childSnapshot.val();//informacion del pedido
         item.key = childSnapshot.key;
-        data.push(item);    
+        dataOrder.push(item);    
       })
       this.setState(prevState => { //setState asigna valor al estado, prevState comprueba estado anterior del estado
-        return { data: [...prevState.data, ...data] };
+        return { data: [...prevState.data, ...dataOrder] };
       });
+      //document.getElementById("divDetalle").innerHTML="";
     })   
+    
   }
+ 
   actualizar(event,key){
-    console.log(event);
+
    let hora=new Date();
     hora=hora.getHours()+":"+hora.getMinutes()+","+hora.getDay()+"/"+hora.getMonth()+1+"/"+hora.getFullYear();
     let refmessage=firebase.database().ref().child(event);
@@ -39,12 +43,13 @@ class OrderKitchen extends Component {
       var temp = this.state.data.filter((el)=>el.key !== event);
       this.setState({
         data: temp
-      })       
+       })    
+       
   }
  
   render() {
     return(
-      <div className="contentOrder">
+      <div className="contentOrder" id="divDetalle">
    <main id="accordion">
    {this.state.data.map(task=>{//buscando data
             if(task.tipo===1 && task.estado===1){//task arreglos de los hijos,si estado es 1 lo dibuja
@@ -60,7 +65,7 @@ class OrderKitchen extends Component {
               <button id={task.key} className="endOrder" onClick={this.actualizar.bind(this,task.key)}>Terminar Pedido</button>
                 </section>
               )
-            }
+            }else
             if(task.tipo===2 && task.estado===1){
               return(
                 <section id={task.cliente}>
@@ -82,8 +87,10 @@ class OrderKitchen extends Component {
               <button id={task.key} className="endOrder" onClick={this.actualizar.bind(this,task.key)}>Terminar Pedido</button>
                 </section>
               )
+            }else{
+              return "";
             }
-           return "";
+           
             })}
     </main>
    </div>

@@ -102,7 +102,9 @@ class Content extends Component {
     return (
     <div>
       <div id="orderChef" style={{display: 'block'}} className="Content" >
-        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.png")} onClick={this.orderWaiter}/></div>
+      
+        <div id="buttonWaiter" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/waiter.png")}  onClick={this.orderWaiter}/></div>
+        
         <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/></div>
       </div>
       <div id="orderK" style={{display: 'none'}}>

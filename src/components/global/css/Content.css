@@ -73,7 +73,7 @@
   }
 
   .fondLuch{
-    background:#f3f0ee52;;
+    background:#f3f0ee91;
   }
 }
 
@@ -150,6 +150,6 @@
 }
 
 .divFormUser{
-  height: 50px;
-  font-size: 30px;
+  height: 25px;
+  font-size: 25px;
 }
