@@ -66,10 +66,9 @@ return(
             <div className="drinksOptions">
                 <select className="buttonAddDrinks" id="burgerAgreg" onChange={event => this.setState({ gaseosa: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>
-                    <option value="Coca-cola">Agua Mineral</option>
+                    <option value="Agua">Agua Mineral</option>
                     <option value="Coca-cola">Coca-cola</option>
                     <option value="Fanta">Fanta</option>
-                    <option value="Orange Crush">Orange Crush</option>
                     <option value="Bilz">Bilz</option>
                     <option value="Pap">Pap</option>
                     <option value="Coca Zero">Coca Zero</option>

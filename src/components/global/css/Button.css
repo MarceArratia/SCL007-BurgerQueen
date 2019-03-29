@@ -28,7 +28,7 @@
 .buttonEmployed{
     height: 300px;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 150px;
     margin-top: 10%;
     margin-left: 12%;
 }
@@ -39,7 +39,7 @@
     height: 100px;
     width: 100px;
     color: black;
-    border-radius: 12px;
+    border-radius: 50px;
 }
 
 .buttonAddSend{
@@ -73,7 +73,7 @@
 
 .buttonAddDrinks{
     background-color:white;
-    font-size: 20px;
+    font-size: 15px;
     height: 40px;
     width: 100px;
     color: black;

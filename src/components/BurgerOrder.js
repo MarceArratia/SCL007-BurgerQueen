@@ -49,7 +49,7 @@ return(
             <div className="burgerTypes">Tipo</div>
             <div className="burgerTypes">Tamaño</div>
             <div className="burgerTypes">Agregado</div>
-            <div className="burgerTypes">Acompañamiento</div>
+            <div className="burgerTypes">Acomp</div>
             <div className="burgerOptions">
                 <select  className="buttonAddFood" id="burgerTypes" onChange={event => this.setState({ tipo: event.target.value})}>
                     <option value="0" defaultValue>Seleccione tipo</option>

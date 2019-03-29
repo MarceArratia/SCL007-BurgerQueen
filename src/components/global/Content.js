@@ -128,6 +128,7 @@ class Content extends Component {
 
 <div className="menuTitleDrinks">Bebidas</div>
 <div><BurgerDrinks /></div>
+<img alt="" className="buttonEmployed" src={require("../../imagarrow.jpg")}/>
 <div className="order"><button className="buttonAddSend" onClick={this.ordenKitchen} >Enviar Pedido</button></div>
 </div>
 

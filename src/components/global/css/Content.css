@@ -2,11 +2,10 @@
 @media screen and (min-width: 600px) and (max-width: 1024px){
   .Content {
     background-color: #8881814d; 
-    min-height: 83vh;
-    padding: 4%;
+    min-height: 75vh;
+    padding: 2%;
     flex-direction: column;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
     color: white;
   }
   .selectFood{
@@ -41,9 +40,11 @@
   }
   
   .menuTitle{
-    margin-left: 44%;
+    margin-left: 45%;
     color: black;
-  }
+    font-size: 30px;
+}
+  
   
 
   .addOrder{
@@ -63,16 +64,16 @@
     margin-left: 44%;
     font-size: 35px;
     margin-top: 5%;
+    color: black;
   }
 
   .fondBreakfast{
     background: #eceae887;
-    padding: 4%;
-    margin-left: 10%;
+    margin-left: 2%;
   }
 
   .fondLuch{
-    background:#eceae887;
+    background:#f3f0ee52;;
   }
 }
 
@@ -146,4 +147,9 @@
   .fondLuch{
     background:#eceae887;
   }
+}
+
+.divForm{
+  height: 50px;
+  font-size: 30px;
 }
