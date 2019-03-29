@@ -11,6 +11,15 @@
     color: black;
     font-size: 50px;
 }
+.divSecondCenter{
+    width: 10%;
+    align-content: center;   
+    display: inline-block;   
+    margin-top: 6%;
+    color: black;
+    font-size: 50px;
+    margin-left: 6%;
+}
 
 .divTitle{
     width: 45%;

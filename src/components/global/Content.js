@@ -7,7 +7,6 @@ import CafeAmericano from '../Count';
 import CafeLeche from '../Count';
 import SandwichJamon from '../Count';
 import JugoNatural from '../Count';
-import {DB_CONFIG} from '../../Initializers/firebase';
 import firebase from 'firebase';
 import BurgerDrinks from '../BurgerDrinks';  
 import BurgerOrder from '../BurgerOrder';
@@ -35,11 +34,11 @@ class Content extends Component {
   breakfastButton(){
     document.getElementById('menuBreakfast').style.display="block";
     document.getElementById('orderChef').style.display="none";
+    document.getElementById('orderWaiter').style.display="none";
   }
   lounchButton(){
     document.getElementById('menuLounch').style.display="block";
-    document.getElementById('buttonBreakfast').style.display="none";
-    document.getElementById('buttonLunch').style.display="none";
+    document.getElementById('orderWaiter').style.display="none";
   }
 
   ordenKitchen(){
@@ -86,6 +85,10 @@ class Content extends Component {
   }
   orderWaiterBack(){
     document.getElementById("orderChef").style.display="block";
+    document.getElementById("menuBreakfast").style.display="none";
+    document.getElementById("menuLounch").style.display="none";
+    document.getElementById("orderK").style.display="none";
+    
 
  
   }
@@ -103,12 +106,13 @@ class Content extends Component {
         <div id="buttonChef" className="selectFood"><img alt="" className="buttonEmployed" src={require("../../imag/kitchen.jpg")} onClick={this.orderKitchenDiv}/></div>
       </div>
       <div id="orderK" style={{display: 'none'}}>
-      <OrderKitchen />
+        <OrderKitchen />
+        <img alt="" className="buttonEmployedArrow" src={require("../../imag/arrow.jpg")} onClick={this.orderWaiterBack}/>
       </div> 
       <div id="orderWaiter" className="Content" style={{display: 'none'}} >
         <div id="buttonBreakfast" className="selectFood"><img alt="" className="buttonAllCoffe" src={require("../../imag/coffe.png")} onClick={this.breakfastButton}/></div>
         <div id="buttonLunch"  className="selectFood"><img alt="" className="buttonAllBurger" src={require("../../imag/burger.png")} onClick={this.lounchButton}/></div>
-     
+      </div>
 <div id="menuBreakfast" className="fondBreakfast" style={{display: 'none'}}> 
 
 <div className="menuTitle"><h2>Menú</h2></div>
@@ -128,7 +132,7 @@ class Content extends Component {
 
   <p></p>
 
-</div>
+
 
 <BurgerOrder />
 

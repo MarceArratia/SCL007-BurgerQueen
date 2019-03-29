@@ -3,6 +3,11 @@
     text-align: center;
     font-size: 35px;
 }
+#accordion section button {
+    display: none;
+    text-align: center;
+    font-size: 35px;
+}
 
 #accordion section a {
     text-align: center;
@@ -16,7 +21,9 @@
 }
 #accordion section:target ul  {
     display: block;
-   
+}
+#accordion section:target button  {
+    display: block;
 }
 
 .contentOrder{
@@ -28,4 +35,5 @@
 .endOrder{
     font-size: 150%;
     margin-left: 38%;
+    background:#ff851b
 }

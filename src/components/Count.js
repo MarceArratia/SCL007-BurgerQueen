@@ -24,7 +24,7 @@ class Count extends React.Component {
           <div>
           <div className="divTitle">{this.props.name}</div>
           <div className="divSecond"><input className="buttonAdd" type="button" onClick={this.decrementar.bind(this)} value="-" /></div>
-             <div className="divSecond" id={this.props.id}>{this.state.contador}</div> 
+             <div className="divSecondCenter" id={this.props.id}>{this.state.contador}</div> 
              <div className="divSecond"><input className="buttonAdd" type="button" onClick={this.aumentar.bind(this)} value="+" /></div>
             
           </div>
